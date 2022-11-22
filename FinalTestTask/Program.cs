@@ -11,17 +11,6 @@ string[] resultStringArray = GetResultStringArray(stringArray);
 PrintArray(resultStringArray);
 
 
-void PrintArray(string[] array)
-{
-    if (array.Length == 0)
-        WriteLine("Результирующий массив не содержит требуемых строк");
-    else
-        Write("Результирующий массив содержит следующие строки: ");
-        foreach (var item in array)
-            Write($"{item} ");
-}
-
-
 string[] GetResultStringArray(string[] array)
 {
     int maxWordLength = 3;
@@ -35,4 +24,15 @@ string[] GetResultStringArray(string[] array)
             }
     Array.Resize(ref result, count); // *Пояснение к строке кода - смотри readme файл
     return result;
+}
+
+
+void PrintArray(string[] array)
+{
+    if (array.Length == 0)
+        WriteLine("Результирующий массив не содержит требуемых строк");
+    else
+        Write("Результирующий массив содержит следующие строки: ");
+        foreach (var item in array)
+            Write($"{item} ");
 }
